@@ -59,6 +59,7 @@ can be worse than no comment at all!
 
 ```elixir
 # Use Comments To Leave Notes On Your Code.
+# Ini adalah comment kita
 ```
 
 Depending on your code editor, You can comment out many lines of code at once. Highlight the code you want to comment
@@ -76,16 +77,16 @@ Click on the keyboard icon <i class="ri-keyboard-box-fill"></i> in the left side
 In the Elixir cell below, create a comment `# hello world`
 
 ```elixir
-
+# hello world
 ```
 
 In the Elixir cell below, comment all of the code out using the **Toggle lines comment** keyboard shortcut.
 
 ```elixir
-1 + 1
-2 + 3
-3 + 1 + 2
-123 + 12 + 256
+# 1 + 1
+# 2 + 3
+# 3 + 1 + 2
+# 123 + 12 + 256
 ```
 
 ## Further Reading
