@@ -60,6 +60,7 @@ can be worse than no comment at all!
 ```elixir
 # Use Comments To Leave Notes On Your Code.
 # Ini adalah comment kita
+# ini adalah comment kedua kita
 ```
 
 Depending on your code editor, You can comment out many lines of code at once. Highlight the code you want to comment
