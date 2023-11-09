@@ -52,6 +52,8 @@ Keep in mind, this will work when running an Elixir project or in the [IEx](http
 
 ```elixir
 IO.gets("I will fail!")
+IO.puts("Ini adalah teks")
+IO.inspect(2)
 ```
 
 That's because there is no command line or other device to retrieve user input from.
