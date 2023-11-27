@@ -125,9 +125,18 @@ defmodule Pokemon do
       iex> Pokemon.attack(attacker, defender)
       %Pokemon{name: "Bulbasaur", type: :grass, health: 10.0, attack: 5, speed: 20}
   """
-  defstruct []
+  defstruct [:name, :type, :health, :attack, :speed]
 
   def attack(attacker, defender) do
+    case {attacker.type, defender.type} do
+      {:fire, :grass} -> %{defender | health: defender.health - attacker.attack * 2}
+      {:grass, :water} -> %{defender | health: defender.health - attacker.attack * 2}
+      {:water, :fire} -> %{defender | health: defender.health - attacker.attack * 2}
+      {:fire, :water} -> %{defender | health: defender.health - attacker.attack * 0.5}
+      {:grass, :fire} -> %{defender | health: defender.health - attacker.attack * 0.5}
+      {:water, :grass} -> %{defender | health: defender.health - attacker.attack * 0.5}
+      {_, _} -> %{defender | health: defender.health - attacker.attack}
+    end
   end
 end
 ```
@@ -186,7 +195,10 @@ Pokemon.attack(charmander, bulbasaur)
 Enter your solution below.
 
 ```elixir
+charmander = %Pokemon{name: "Charmander", type: :fire, health: 20.0, attack: 5, speed: 20}
+bulbasaur = %Pokemon{name: "Bulbasar", type: :grass, health: 20.0, attack: 5, speed: 20}
 
+Pokemon.attack(charmander, bulbasaur)
 ```
 
 ## Commit Your Progress
