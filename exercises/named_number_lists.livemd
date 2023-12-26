@@ -87,7 +87,26 @@ flowchart
 Enter your solution below.
 
 ```elixir
+ranges = 1..9
 
+random_ranges =
+  Enum.map(ranges, fn _number ->
+    Enum.random(1..9)
+  end)
+
+Enum.map(random_ranges, fn number ->
+  case number do
+    1 -> "one"
+    2 -> "two"
+    3 -> "tree"
+    4 -> "four"
+    5 -> "five"
+    6 -> "six"
+    7 -> "seven"
+    8 -> "eight"
+    9 -> "nine"
+  end
+end)
 ```
 
 ## Commit Your Progress
