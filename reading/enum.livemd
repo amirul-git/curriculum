@@ -273,7 +273,7 @@ When complete, it returns the result of the last function call, which is typical
 
 ```elixir
 # 0 Is The Initial Accumulator Value
-Enum.reduce(1..3, 0, fn element, accumulator ->
+Enum.reduce(1..10, 0, fn element, accumulator ->
   element + accumulator
 end)
 ```
